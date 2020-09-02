@@ -1,0 +1,292 @@
+@layout("/common/_form.html",{js:["/assets/botDeviceInfo/botDeviceInfo_edit.js"]}){
+
+<form class="layui-form" id="botDeviceInfoForm" lay-filter="botDeviceInfoForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">基本信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input name="id" type="hidden"/>
+
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备名称<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceName" name="deviceName" placeholder="请输入设备名称" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备编码<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceCode" name="deviceCode" placeholder="请输入设备编码" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备型号<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceModel" name="deviceModel" placeholder="请输入设备型号" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备类型id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceTypeId" name="deviceTypeId" placeholder="请输入设备类型id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">机组id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="unitId" name="unitId" placeholder="请输入机组id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">系统id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="systemId" name="systemId" placeholder="请输入系统id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">主要材料<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="mainMaterial" name="mainMaterial" placeholder="请输入主要材料" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">重量<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="weight" name="weight" placeholder="请输入重量" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">投运时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="putIntoOperateTime" name="putIntoOperateTime" placeholder="请输入投运时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">出厂时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="outFactoryTime" name="outFactoryTime" placeholder="请输入出厂时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">安装时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="installTime" name="installTime" placeholder="请输入安装时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">安装位置<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="installPosition" name="installPosition" placeholder="请输入安装位置" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备生产厂家id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceFactoryId" name="deviceFactoryId" placeholder="请输入设备生产厂家id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">初始价值<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="originalCost" name="originalCost" placeholder="请输入初始价值" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备功能<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceFunction" name="deviceFunction" placeholder="请输入设备功能" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">操作方法<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="operationMothod" name="operationMothod" placeholder="请输入操作方法" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设计寿命<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="designLifetime" name="designLifetime" placeholder="请输入设计寿命" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">维修次数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="repairCount" name="repairCount" placeholder="请输入维修次数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">维保要求<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="repairRequirement" name="repairRequirement" placeholder="请输入维保要求" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">预警次数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="warningCount" name="warningCount" placeholder="请输入预警次数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">替换次数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="replaceCount" name="replaceCount" placeholder="请输入替换次数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备运行状态<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceStatue" name="deviceStatue" placeholder="请输入设备运行状态" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">图片地址<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="imageUrl" name="imageUrl" placeholder="请输入图片地址" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">二维码图片地址<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="qrCodeImageUrl" name="qrCodeImageUrl" placeholder="请输入二维码图片地址" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备规格信息<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="specifications" name="specifications" placeholder="请输入设备规格信息" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备参数范围信息<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="paramsRange" name="paramsRange" placeholder="请输入设备参数范围信息" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">初始设备id,默认为本设备id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="orDeviceId" name="orDeviceId" placeholder="请输入初始设备id,默认为本设备id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">运行电流<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="runCurrentValue" name="runCurrentValue" placeholder="请输入运行电流" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">运行电压<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="runVoltageValue" name="runVoltageValue" placeholder="请输入运行电压" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">额定功率<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="ratedPower" name="ratedPower" placeholder="请输入额定功率" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">转速<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="speed" name="speed" placeholder="请输入转速" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">运行主设备id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="runDeviceId" name="runDeviceId" placeholder="请输入运行主设备id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备总台数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceCount" name="deviceCount" placeholder="请输入设备总台数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">运行台数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="operateCount" name="operateCount" placeholder="请输入运行台数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备用台数<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="backupCount" name="backupCount" placeholder="请输入备用台数" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">父设备id-针对电机<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="parentId" name="parentId" placeholder="请输入父设备id-针对电机" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">是否带电设备，默认为1(是)<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="isElectricDevice" name="isElectricDevice" placeholder="请输入是否带电设备，默认为1(是)" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">是否更换(0表示不需更换，1表示需要更换)<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="isChange" name="isChange" placeholder="请输入是否更换(0表示不需更换，1表示需要更换)" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">创建者<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="createBy" name="createBy" placeholder="请输入创建者" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">创建时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="createDate" name="createDate" placeholder="请输入创建时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">更新者<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="updateBy" name="updateBy" placeholder="请输入更新者" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">更新时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="updateDate" name="updateDate" placeholder="请输入更新时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">删除者<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deleteBy" name="deleteBy" placeholder="请输入删除者" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">删除时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deleteDate" name="deleteDate" placeholder="请输入删除时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备注<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="remarks" name="remarks" placeholder="请输入备注" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button>
+        <button type="reset" class="layui-btn layui-btn-primary" id="cancel">&emsp;取消&emsp;</button>
+    </div>
+
+</form>
+
+@}

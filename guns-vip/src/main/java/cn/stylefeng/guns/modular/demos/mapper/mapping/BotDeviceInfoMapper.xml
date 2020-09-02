@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.demos.mapper.BotDeviceInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.demos.entity.BotDeviceInfo">
+        <id column="id" property="id" />
+        <result column="device_name" property="deviceName" />
+        <result column="device_code" property="deviceCode" />
+        <result column="device_model" property="deviceModel" />
+        <result column="device_type_id" property="deviceTypeId" />
+        <result column="unit_id" property="unitId" />
+        <result column="system_id" property="systemId" />
+        <result column="main_material" property="mainMaterial" />
+        <result column="weight" property="weight" />
+        <result column="put_into_operate_time" property="putIntoOperateTime" />
+        <result column="out_factory_time" property="outFactoryTime" />
+        <result column="install_time" property="installTime" />
+        <result column="install_position" property="installPosition" />
+        <result column="device_factory_id" property="deviceFactoryId" />
+        <result column="original_cost" property="originalCost" />
+        <result column="device_function" property="deviceFunction" />
+        <result column="operation_mothod" property="operationMothod" />
+        <result column="design_lifetime" property="designLifetime" />
+        <result column="repair_count" property="repairCount" />
+        <result column="repair_requirement" property="repairRequirement" />
+        <result column="warning_count" property="warningCount" />
+        <result column="replace_count" property="replaceCount" />
+        <result column="device_statue" property="deviceStatue" />
+        <result column="image_url" property="imageUrl" />
+        <result column="qr_code_image_url" property="qrCodeImageUrl" />
+        <result column="specifications" property="specifications" />
+        <result column="params_range" property="paramsRange" />
+        <result column="or_device_id" property="orDeviceId" />
+        <result column="run_current_value" property="runCurrentValue" />
+        <result column="run_voltage_value" property="runVoltageValue" />
+        <result column="rated_power" property="ratedPower" />
+        <result column="speed" property="speed" />
+        <result column="run_device_id" property="runDeviceId" />
+        <result column="device_count" property="deviceCount" />
+        <result column="operate_count" property="operateCount" />
+        <result column="backup_count" property="backupCount" />
+        <result column="parent_id" property="parentId" />
+        <result column="is_electric_device" property="isElectricDevice" />
+        <result column="is_change" property="isChange" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="delete_by" property="deleteBy" />
+        <result column="delete_date" property="deleteDate" />
+        <result column="remarks" property="remarks" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", device_name AS "deviceName", device_code AS "deviceCode", device_model AS "deviceModel", device_type_id AS "deviceTypeId", unit_id AS "unitId", system_id AS "systemId", main_material AS "mainMaterial", weight AS "weight", put_into_operate_time AS "putIntoOperateTime", out_factory_time AS "outFactoryTime", install_time AS "installTime", install_position AS "installPosition", device_factory_id AS "deviceFactoryId", original_cost AS "originalCost", device_function AS "deviceFunction", operation_mothod AS "operationMothod", design_lifetime AS "designLifetime", repair_count AS "repairCount", repair_requirement AS "repairRequirement", warning_count AS "warningCount", replace_count AS "replaceCount", device_statue AS "deviceStatue", image_url AS "imageUrl", qr_code_image_url AS "qrCodeImageUrl", specifications AS "specifications", params_range AS "paramsRange", or_device_id AS "orDeviceId", run_current_value AS "runCurrentValue", run_voltage_value AS "runVoltageValue", rated_power AS "ratedPower", speed AS "speed", run_device_id AS "runDeviceId", device_count AS "deviceCount", operate_count AS "operateCount", backup_count AS "backupCount", parent_id AS "parentId", is_electric_device AS "isElectricDevice", is_change AS "isChange", create_by AS "createBy", create_date AS "createDate", update_by AS "updateBy", update_date AS "updateDate", delete_by AS "deleteBy", delete_date AS "deleteDate", remarks AS "remarks"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.demos.model.result.BotDeviceInfoResult" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotDeviceInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_device_info where 1 = 1
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotDeviceInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_device_info where 1 = 1
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.demos.model.result.BotDeviceInfoResult" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotDeviceInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_device_info where 1 = 1
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotDeviceInfoParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_device_info where 1 = 1
+    </select>
+
+</mapper>

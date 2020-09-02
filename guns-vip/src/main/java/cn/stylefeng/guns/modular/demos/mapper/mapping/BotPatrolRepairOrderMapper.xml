@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.demos.mapper.BotPatrolRepairOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.demos.entity.BotPatrolRepairOrder">
+        <id column="id" property="id" />
+        <result column="patrol_defect_id" property="patrolDefectId" />
+        <result column="defect_code" property="defectCode" />
+        <result column="unit_id" property="unitId" />
+        <result column="device_type" property="deviceType" />
+        <result column="device_id" property="deviceId" />
+        <result column="order_statue" property="orderStatue" />
+        <result column="defect_content" property="defectContent" />
+        <result column="defect_grade" property="defectGrade" />
+        <result column="defect_specialty" property="defectSpecialty" />
+        <result column="run_zhi" property="runZhi" />
+        <result column="discovery_date" property="discoveryDate" />
+        <result column="discovery_time" property="discoveryTime" />
+        <result column="discovery_person_id" property="discoveryPersonId" />
+        <result column="info_maintenance_time" property="infoMaintenanceTime" />
+        <result column="time_limit" property="timeLimit" />
+        <result column="time_limit_unit" property="timeLimitUnit" />
+        <result column="receive_time" property="receiveTime" />
+        <result column="receive_person_id" property="receivePersonId" />
+        <result column="eliminate_person_id" property="eliminatePersonId" />
+        <result column="hang_up_reason" property="hangUpReason" />
+        <result column="hang_up_person_id" property="hangUpPersonId" />
+        <result column="hang_up_time" property="hangUpTime" />
+        <result column="return_eliminate_time" property="returnEliminateTime" />
+        <result column="return_eliminate_person_id" property="returnEliminatePersonId" />
+        <result column="return_fault_type" property="returnFaultType" />
+        <result column="return_change_part" property="returnChangePart" />
+        <result column="return_reatment_measure" property="returnReatmentMeasure" />
+        <result column="return_apply_over_time" property="returnApplyOverTime" />
+        <result column="return_apply_over_time_unit" property="returnApplyOverTimeUnit" />
+        <result column="return_apply_result" property="returnApplyResult" />
+        <result column="return_apply_check_person_id" property="returnApplyCheckPersonId" />
+        <result column="return_apply_check_time" property="returnApplyCheckTime" />
+        <result column="return_over_time" property="returnOverTime" />
+        <result column="return_over_time_unit" property="returnOverTimeUnit" />
+        <result column="return_time" property="returnTime" />
+        <result column="return_person_id" property="returnPersonId" />
+        <result column="check_result" property="checkResult" />
+        <result column="check_person_id" property="checkPersonId" />
+        <result column="check_time" property="checkTime" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="remarks" property="remarks" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id AS "id", patrol_defect_id AS "patrolDefectId", defect_code AS "defectCode", unit_id AS "unitId", device_type AS "deviceType", device_id AS "deviceId", order_statue AS "orderStatue", defect_content AS "defectContent", defect_grade AS "defectGrade", defect_specialty AS "defectSpecialty", run_zhi AS "runZhi", discovery_date AS "discoveryDate", discovery_time AS "discoveryTime", discovery_person_id AS "discoveryPersonId", info_maintenance_time AS "infoMaintenanceTime", time_limit AS "timeLimit", time_limit_unit AS "timeLimitUnit", receive_time AS "receiveTime", receive_person_id AS "receivePersonId", eliminate_person_id AS "eliminatePersonId", hang_up_reason AS "hangUpReason", hang_up_person_id AS "hangUpPersonId", hang_up_time AS "hangUpTime", return_eliminate_time AS "returnEliminateTime", return_eliminate_person_id AS "returnEliminatePersonId", return_fault_type AS "returnFaultType", return_change_part AS "returnChangePart", return_reatment_measure AS "returnReatmentMeasure", return_apply_over_time AS "returnApplyOverTime", return_apply_over_time_unit AS "returnApplyOverTimeUnit", return_apply_result AS "returnApplyResult", return_apply_check_person_id AS "returnApplyCheckPersonId", return_apply_check_time AS "returnApplyCheckTime", return_over_time AS "returnOverTime", return_over_time_unit AS "returnOverTimeUnit", return_time AS "returnTime", return_person_id AS "returnPersonId", check_result AS "checkResult", check_person_id AS "checkPersonId", check_time AS "checkTime", create_by AS "createBy", create_date AS "createDate", update_by AS "updateBy", update_date AS "updateDate", remarks AS "remarks", del_flag AS "delFlag"
+    </sql>
+
+
+    <select id="customList" resultType="cn.stylefeng.guns.modular.demos.model.result.BotPatrolRepairOrderResult" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_patrol_repair_order where 1 = 1
+    </select>
+
+    <select id="customMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_patrol_repair_order where 1 = 1
+    </select>
+
+    <select id="customPageList" resultType="cn.stylefeng.guns.modular.demos.model.result.BotPatrolRepairOrderResult" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_patrol_repair_order where 1 = 1
+    </select>
+
+    <select id="customPageMapList" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        select
+        <include refid="Base_Column_List"/>
+        from bot_patrol_repair_order where 1 = 1
+    </select>
+    <!-- 查询echarts柱状图数据-->
+    <select id="queryDeviceType" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+    SELECT  `device_type`,COUNT(*) AS cnt
+    FROM `bot_patrol_repair_order`
+    GROUP BY device_type
+
+</select>
+<!-- 查询echarts故障图数据-->
+    <select id="queryFaultType" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        SELECT  `return_fault_type`,COUNT(*) AS cnt
+        FROM `bot_patrol_repair_order`
+        GROUP BY return_fault_type
+    </select>
+    <!-- 查询echarts更换部件图数据-->
+    <select id="queryChangePart" resultType="map" parameterType="cn.stylefeng.guns.modular.demos.model.params.BotPatrolRepairOrderParam">
+        SELECT  `return_change_part`,COUNT(*) AS cnt
+        FROM `bot_patrol_repair_order`
+        GROUP BY return_change_part
+    </select>
+
+</mapper>

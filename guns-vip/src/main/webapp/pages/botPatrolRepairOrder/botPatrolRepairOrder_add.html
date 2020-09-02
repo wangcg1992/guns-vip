@@ -1,0 +1,292 @@
+@layout("/common/_form.html",{js:["/assets/botPatrolRepairOrder/botPatrolRepairOrder_add.js"],css:["/assets/expand/module/formSelects/formSelects-v4.css"]}){
+
+<form class="layui-form" id="botPatrolRepairOrderForm" lay-filter="botPatrolRepairOrderForm">
+    <div class="layui-fluid" style="padding-bottom: 75px;">
+        <div class="layui-card">
+            <div class="layui-card-header">基本信息</div>
+            <div class="layui-card-body">
+                <div class="layui-form-item layui-row">
+                    <input name="id" type="hidden"/>
+
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">缺陷联系单id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="patrolDefectId" name="patrolDefectId" placeholder="请输入缺陷联系单id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">缺陷联系单code<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="defectCode" name="defectCode" placeholder="请输入缺陷联系单code" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">机组id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="unitId" name="unitId" placeholder="请输入机组id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceType" name="deviceType" placeholder="请输入设备类型" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">设备id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="deviceId" name="deviceId" placeholder="请输入设备id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">工单状态-1待接单2待返单3待验收9已完成<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="orderStatue" name="orderStatue" placeholder="请输入工单状态-1待接单2待返单3待验收9已完成" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">缺陷内容<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="defectContent" name="defectContent" placeholder="请输入缺陷内容" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">缺陷级别-ABC<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="defectGrade" name="defectGrade" placeholder="请输入缺陷级别-ABC" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">缺陷所属专业-机务、电气、热工、外包<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="defectSpecialty" name="defectSpecialty" placeholder="请输入缺陷所属专业-机务、电气、热工、外包" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">所属轮值-一二三四值<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="runZhi" name="runZhi" placeholder="请输入所属轮值-一二三四值" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">发现日期<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="discoveryDate" name="discoveryDate" placeholder="请输入发现日期" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">发现时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="discoveryTime" name="discoveryTime" placeholder="请输入发现时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">发现人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="discoveryPersonId" name="discoveryPersonId" placeholder="请输入发现人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">通知检修时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="infoMaintenanceTime" name="infoMaintenanceTime" placeholder="请输入通知检修时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">消缺时限<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="timeLimit" name="timeLimit" placeholder="请输入消缺时限" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">消缺时限单位-小时、天<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="timeLimitUnit" name="timeLimitUnit" placeholder="请输入消缺时限单位-小时、天" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">接单时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="receiveTime" name="receiveTime" placeholder="请输入接单时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">接单人<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="receivePersonId" name="receivePersonId" placeholder="请输入接单人" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">消缺人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="eliminatePersonId" name="eliminatePersonId" placeholder="请输入消缺人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">挂起原因<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="hangUpReason" name="hangUpReason" placeholder="请输入挂起原因" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">挂起人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="hangUpPersonId" name="hangUpPersonId" placeholder="请输入挂起人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">挂起时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="hangUpTime" name="hangUpTime" placeholder="请输入挂起时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">返单消缺时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnEliminateTime" name="returnEliminateTime" placeholder="请输入返单消缺时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">返单消缺人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnEliminatePersonId" name="returnEliminatePersonId" placeholder="请输入返单消缺人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">故障类型<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnFaultType" name="returnFaultType" placeholder="请输入故障类型" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">更换部件<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnChangePart" name="returnChangePart" placeholder="请输入更换部件" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">处理措施<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnReatmentMeasure" name="returnReatmentMeasure" placeholder="请输入处理措施" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请延期时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnApplyOverTime" name="returnApplyOverTime" placeholder="请输入申请延期时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">申请延期时长单位<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnApplyOverTimeUnit" name="returnApplyOverTimeUnit" placeholder="请输入申请延期时长单位" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">延期申请结果-0驳回1通过<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnApplyResult" name="returnApplyResult" placeholder="请输入延期申请结果-0驳回1通过" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">延期申请审批人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnApplyCheckPersonId" name="returnApplyCheckPersonId" placeholder="请输入延期申请审批人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">延期申请审批时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnApplyCheckTime" name="returnApplyCheckTime" placeholder="请输入延期申请审批时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">实际延期时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnOverTime" name="returnOverTime" placeholder="请输入实际延期时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">实际延期单位<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnOverTimeUnit" name="returnOverTimeUnit" placeholder="请输入实际延期单位" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">返单时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnTime" name="returnTime" placeholder="请输入返单时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">返单人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="returnPersonId" name="returnPersonId" placeholder="请输入返单人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">验收结果-1闭环验收、2作废<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="checkResult" name="checkResult" placeholder="请输入验收结果-1闭环验收、2作废" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">验收人id<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="checkPersonId" name="checkPersonId" placeholder="请输入验收人id" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">验收时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="checkTime" name="checkTime" placeholder="请输入验收时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">创建人,与sys_user表关联<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="createBy" name="createBy" placeholder="请输入创建人,与sys_user表关联" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">创建时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="createDate" name="createDate" placeholder="请输入创建时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">修改人,与sys_user表关联<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="updateBy" name="updateBy" placeholder="请输入修改人,与sys_user表关联" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">修改时间<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="updateDate" name="updateDate" placeholder="请输入修改时间" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">备注<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="remarks" name="remarks" placeholder="请输入备注" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">删除标记<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="delFlag" name="delFlag" placeholder="请输入删除标记" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group-bottom text-center">
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>&emsp;提交&emsp;</button>
+        <button type="reset" class="layui-btn layui-btn-primary" id="cancel">&emsp;取消&emsp;</button>
+    </div>
+
+</form>
+
+@}
